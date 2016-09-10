@@ -49,8 +49,11 @@ def polynomial(degree, maxJitter, minN, maxN):
     degreeList.append(i)
   x = random.uniform(minN,maxN)
   y = brandonSummer(x, coefficients, degreeList)
+  return(x,y)
+  '''
   jsonReturn = jsonReturner(['x','y'],[x,y])
   return jsonReturn
+  '''
 
 def sinusodial(period, xOffset, yOffset, maxJitter, minN, maxN):
   jitter = findJitter(maxJitter)
@@ -59,3 +62,5 @@ def sinusodial(period, xOffset, yOffset, maxJitter, minN, maxN):
   jsonReturn = jsonReturner(['x','y'],[x,y])
   return jsonReturn
 
+for i in range(0,20):
+  print(polynomial(5, 3, -5, 5)) 
