@@ -7,10 +7,9 @@ uniform <- function(min, max, step=NA){
   return(number)
 }
 
-
-
-normal <- function(mean, stdev, round){
-  
+normal <- function(mean, stdev, round=FALSE){
+  number <- rnorm(1,mean,stdev)
+  return(ifelse(round,round(number),number))
 }
 
 findJitter<- function(maxJitter){
